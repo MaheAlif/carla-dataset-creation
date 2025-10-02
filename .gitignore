@@ -1,0 +1,178 @@
+# CARLA Dataset Creation Repository
+# =================================
+# This .gitignore excludes CARLA binaries and keeps only research code
+# 
+# Setup on new PC:
+# 1. Download CARLA 0.9.16 to desired location
+# 2. cd into CARLA folder
+# 3. git clone https://github.com/MaheAlif/carla-dataset-creation.git .
+# 4. Follow CARLA_Setup_Guide.md
+
+# =============================================================================
+# EXCLUDE CARLA BINARIES AND LARGE FILES
+# =============================================================================
+
+# CARLA Executable and Engine
+CarlaUE4.exe
+CarlaUE4/
+Engine/
+WindowsNoEditor/
+
+# Large binary assets
+HDMaps/
+*.pcd
+*.bin
+*.uasset
+*.umap
+*.pak
+
+# Python installer (user downloads separately)
+python-*.exe
+
+# =============================================================================
+# EXCLUDE GENERATED DATA AND OUTPUTS
+# =============================================================================
+
+# Virtual environment (user creates their own)  
+carla_env/
+venv/
+env/
+.venv/
+
+# Recording outputs
+driving_session/
+output/
+recordings/
+*.mp4
+*.wav
+*.avi
+
+# Logs and cache
+*.log
+logs/
+*.tmp
+temp/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# =============================================================================
+# EXCLUDE CO-SIMULATION AND OPTIONAL COMPONENTS
+# =============================================================================
+
+# Co-simulation tools (not needed for basic research)
+Co-Simulation/
+Import/
+Tools/
+Unreal/
+
+# Optional demos and unused examples
+PythonAPI/examples/automatic_control.py
+PythonAPI/examples/bounding_boxes.py
+PythonAPI/examples/client_bounding_boxes.py
+PythonAPI/examples/draw_skeleton.py
+PythonAPI/examples/dynamic_weather.py
+PythonAPI/examples/generate_traffic.py
+PythonAPI/examples/lidar_to_camera.py
+PythonAPI/examples/manual_control.py
+PythonAPI/examples/manual_control_*.py
+PythonAPI/examples/no_rendering_mode.py
+PythonAPI/examples/open3d_lidar.py
+PythonAPI/examples/sensor_synchronization.py
+PythonAPI/examples/show_recorder_*.py
+PythonAPI/examples/start_*.py
+PythonAPI/examples/stop_*.py
+PythonAPI/examples/synchronous_mode.py
+PythonAPI/examples/tutorial*.py
+PythonAPI/examples/vehicle_*.py
+PythonAPI/examples/visualize_*.py
+PythonAPI/examples/*Demo*.py
+PythonAPI/examples/test_*.py
+PythonAPI/examples/master_*.py
+PythonAPI/examples/get_*.py
+PythonAPI/examples/invertedai_*.py
+PythonAPI/examples/nvidia/
+
+# Unused CARLA API files (keep only essential)
+PythonAPI/carla/
+PythonAPI/util/
+
+# =============================================================================
+# EXCLUDE DEVELOPMENT AND EDITOR FILES
+# =============================================================================
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+*.code-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# Git files (but keep .gitignore)
+.git/
+# Don't exclude .gitignore itself
+
+# =============================================================================
+# INCLUDE RESEARCH FILES (EXPLICITLY WHITELIST)
+# =============================================================================
+
+# Documentation and setup
+!README.md
+!CARLA_Setup_Guide.md
+!LICENSE
+!CHANGELOG
+!Dockerfile
+
+# Research scripts (in PythonAPI/examples/)
+!PythonAPI/examples/record_driving_session.py
+!PythonAPI/examples/simple_drive.py
+!PythonAPI/examples/config.py
+!PythonAPI/examples/requirements.txt
+!PythonAPI/examples/setup_validation.py
+!PythonAPI/examples/conversation_history.md
+!PythonAPI/examples/README.md
+
+# Documentation folders
+!PythonAPI/examples/docs/
+!PythonAPI/examples/docs/**
+!PythonAPI/examples/examples/
+!PythonAPI/examples/examples/**
+!PythonAPI/examples/configs/
+!PythonAPI/examples/configs/**
+
+# Keep essential CARLA structure but empty
+!PythonAPI/
+!PythonAPI/examples/
+
+# =============================================================================
+# SECURITY AND PERSONAL DATA
+# =============================================================================
+
+# Environment variables and secrets
+.env
+.secrets
+credentials.*
+api_keys.*
+
+# Personal files
+personal_notes.*
+private/
+.private/
+
+# =============================================================================
+# SPECIAL CASES
+# =============================================================================
+
+# Allow small example files for documentation
+!PythonAPI/examples/examples/sample_output/README.md
+
+# Temporary override patterns (use ! to force include specific files if needed)
+# Example: !some_large_file_we_actually_want.bin

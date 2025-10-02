@@ -1,0 +1,74 @@
+# CARLA Dataset Creation - Python Dependencies
+# Install these packages in your carla_env virtual environment
+# 
+# Usage:
+#   pip install -r requirements.txt
+
+# Core CARLA Dependencies
+# Note: CARLA Python API (carla package) must be installed separately
+# Follow the setup guide for proper CARLA API installation
+
+# Computer Vision and Image Processing
+opencv-python==4.8.1.78     # Video recording and image processing
+numpy==1.24.3                # Numerical operations for image arrays
+Pillow==10.0.1               # Image manipulation and processing
+
+# Game Development and GUI
+pygame==2.5.2                # Manual control interface and display
+
+# Data Processing and Analysis
+matplotlib==3.7.2            # Data visualization and plotting (optional)
+
+# File I/O and Data Formats
+# json - Built into Python (for action logging)
+# wave - Built into Python (for audio file creation)
+# time - Built into Python (for timestamps)
+# os - Built into Python (for file operations)
+# random - Built into Python (for random selections)
+# glob - Built into Python (for file pattern matching)
+
+# Development and Debugging (Optional)
+# psutil==5.9.5              # System monitoring (uncomment if needed)
+# tqdm==4.66.1               # Progress bars (uncomment if needed)
+
+# =============================================================================
+# INSTALLATION NOTES:
+# =============================================================================
+# 
+# 1. Create virtual environment:
+#    py -3.12 -m venv carla_env
+#
+# 2. Activate environment:
+#    .\carla_env\Scripts\Activate.ps1  (PowerShell)
+#    .\carla_env\Scripts\activate.bat  (Command Prompt)
+#
+# 3. Install CARLA Python API:
+#    pip install path/to/CARLA_0.9.16/PythonAPI/carla/dist/carla-0.9.16-py3.7-win-amd64.egg
+#
+# 4. Install requirements:
+#    pip install -r requirements.txt
+#
+# 5. Verify installation:
+#    python -c "import carla; import cv2; import pygame; print('All dependencies installed successfully!')"
+#
+# =============================================================================
+# VERSION COMPATIBILITY:
+# =============================================================================
+# - Python: 3.12.7 (required for CARLA 0.9.16)
+# - CARLA: 0.9.16
+# - OpenCV: 4.8.x (stable with Python 3.12)
+# - NumPy: 1.24.x (compatible with OpenCV 4.8)
+# - Pygame: 2.5.x (latest stable)
+#
+# =============================================================================
+# HARDWARE OPTIMIZATION (GTX 1650):
+# =============================================================================
+# If running on GTX 1650 or similar hardware:
+# - Reduce resolution in config.py
+# - Lower NPC count for better performance
+# - Use CARLA low quality settings
+# See hardware_optimization.md for detailed settings
+pygame
+matplotlib
+open3d
+Pillow
